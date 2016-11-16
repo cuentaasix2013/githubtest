@@ -24,7 +24,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        mas = (Button) view.findViewById(R.id.button);
+        mas = (Button) view.findViewById(R.id.mas);
         menos = (Button) view.findViewById(R.id.btn2);
         txt = (TextView) view.findViewById(R.id.textView);
 
@@ -38,7 +38,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
     public void onClick(View v) {
 
         switch (v.getId()){
-            case R.id.button:
+            case R.id.mas:
                 i++;
                 txt.setText(String.valueOf(i));
                 break;
