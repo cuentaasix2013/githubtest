@@ -13,7 +13,7 @@ import android.widget.TextView;
  */
 public class MainActivityFragment extends Fragment implements View.OnClickListener{
 
-    private Button mas, menos;
+    private Button mas, menos, muli;
     private TextView txt;
     int i = 0;
     public MainActivityFragment() {
@@ -26,10 +26,12 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
 
         mas = (Button) view.findViewById(R.id.mas);
         menos = (Button) view.findViewById(R.id.btn2);
+        muli = (Button) view.findViewById(R.id.multi);
         txt = (TextView) view.findViewById(R.id.textView);
 
         mas.setOnClickListener(this);
         menos.setOnClickListener(this);
+        muli.setOnClickListener(this);
 
         return view;
     }
@@ -46,7 +48,10 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
                 i--;
                 txt.setText(String.valueOf(i));
                 break;
-
+            case R.id.multi:
+                i *= 2;
+                txt.setText(String.valueOf(i));
+                break;
         }
     }
 }
