@@ -29,6 +29,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
         txt = (TextView) view.findViewById(R.id.textView);
 
         mas.setOnClickListener(this);
+        menos.setOnClickListener(this);
 
         return view;
     }
