@@ -13,7 +13,7 @@ import android.widget.TextView;
  */
 public class MainActivityFragment extends Fragment implements View.OnClickListener{
 
-    private Button mas;
+    private Button mas, menos;
     private TextView txt;
     int i = 0;
     public MainActivityFragment() {
@@ -25,6 +25,7 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
         mas = (Button) view.findViewById(R.id.button);
+        menos = (Button) view.findViewById(R.id.btn2);
         txt = (TextView) view.findViewById(R.id.textView);
 
         mas.setOnClickListener(this);
@@ -40,6 +41,11 @@ public class MainActivityFragment extends Fragment implements View.OnClickListen
                 i++;
                 txt.setText(String.valueOf(i));
                 break;
+            case R.id.btn2:
+                i--;
+                txt.setText(String.valueOf(i));
+                break;
+
         }
     }
 }
